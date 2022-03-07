@@ -22,7 +22,6 @@ header-includes:
 | Submission instruction              | Submission: Via Quercus quiz (50 minutes, 1 attempt, no pausing) and [Markus](https://markus-ds.teach.cs.toronto.edu/) (10 percentage point penalty for not submitting required files)                                                                                                                                                                              |
 | Accommodations and extension policy | In the case of a personal illness/emergency, a [declaration can be made](https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEOKHUU3SzAJJhmOKjJhDWEpUNTFDSzhZTFlXUzVYMVlNM1FEUTRZMkVWOC4u), but must be submitted no more than 3 days after the due date. Extensions may be requested through the same form up to 48 hours before the due date. |
 
-
           
 Mixed assessment 1 has two components:
 
@@ -33,12 +32,13 @@ Mixed assessment 1 has two components:
   
 # How your grade is calculated
 
-- The 98% of your grade is based on your performance on the __timed__ component.  
-- 2% of your grade is based on the correctness of your Rmd. There will be a student facing autotest you can run on your submissions to check if the objects required are there and appear to be mostly sensible (note, don't guarantee in all cases that they are RIGHT).
+- The 98% of your mini-mixed grade is based on your performance on the __timed__ component.  
+- 2% of your grade is based on the correctness of your Rmd. There will be a student facing autotest you can run on your submissions to check if the objects required are there and appear to be mostly sensible (note, this doesn't guarantee in all cases that they are fully RIGHT, just that they passes the checks set up for this component).
 - If you do the timed component, but DON'T submit the appropriate Rmd and PDF to MarkUs by the end of the window, there is an __additional__ 10 percentage point penalty.
   - Note the file name requirements: `sta303-w22-mini-mixed.Rmd` and `sta303-w22-mini-mixed.pdf`.
   - You can upload as many times as you like before the end of the window, so make sure you upload a 'safety' copy of your Rmd and PDF once you have started working on it.
   
+\newpage
 # Instructions
 
 Before making any changes in this Rmd, you should Knit it to make sure it works.
@@ -59,8 +59,9 @@ If you're working locally, you'll have to install packages first if they are not
 Note: __Do not add any additional libraries/packages__. You do not need them to complete these tasks and they may interfere with the autochecking of your submission.
 
 ```{r, setup, eval=FALSE, message=FALSE, purl=FALSE}
-# Working locally? RUN THIS CHUNK FIRST! You should only need to run it once on your local machine.
-# On the JupyterHub, you may need to run it at the beginning of each new session until all packages are installed.
+# Working locally? RUN THIS CHUNK FIRST! 
+  # You should only need to run it once on your local machine.
+# On the JupyterHub, you may need to run it at the beginning of each new session.
 
 # These are the packages you will need for this activity.
 packages_needed <- c("tidyverse", "devtools", "lme4", 
@@ -95,10 +96,6 @@ devtools::install_github("elb0/myStarship", force = TRUE)
 library(tidyverse)
 library(lme4)
 library(myStarship)
-
-# Once you've updated the code and are ready to knit
-# change this to eval = TRUE
-knitr::opts_chunk$set(eval = FALSE)
 ```
 
 \newpage
